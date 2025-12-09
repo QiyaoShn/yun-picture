@@ -60,7 +60,7 @@ public abstract class PictureUploadTemplate {
             PutObjectResult putObjectResult = cosManager.putPictureObject(uploadPath, file);
             //5. 获取图片信息对象，封装返回结果
             ImageInfo imageInfo = putObjectResult.getCiUploadResult().getOriginalInfo().getImageInfo();
-            return buildResult(uploadPath, originalFilename, file,imageInfo);
+            return buildResult(originalFilename, file,uploadPath,imageInfo);
         } catch (Exception e) {
             log.error("图片上传到对象存储失败", e);
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "上传失败");
@@ -100,7 +100,7 @@ public abstract class PictureUploadTemplate {
      * @param imageInfo 对象存储返回的图片信息
      * @return
      */
-    private UploadPictureResult buildResult(String uploadPath, String originalFilename, File file, ImageInfo imageInfo) {
+    private UploadPictureResult buildResult( String originalFilename, File file, String uploadPath,ImageInfo imageInfo) {
         //计算图像宽高
         int picWidth = imageInfo.getWidth();
         int picHeight = imageInfo.getHeight();
