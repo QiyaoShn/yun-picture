@@ -36,6 +36,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/picture")
@@ -256,7 +257,7 @@ public class PictureController {
         String cacheValue = JSONUtil.toJsonStr(pictureVOPage);
         //设置缓存过期时间，5~10分钟过期，加入一些随机因素防止缓存雪崩
         int cacheExpireTime = 300 + RandomUtil.randomInt(0, 300);
-        //opsForValue.set(redisKey, cacheValue, cacheExpireTime, TimeUnit.SECONDS);
+        opsForValue.set(cacheKey, cacheValue, cacheExpireTime, TimeUnit.SECONDS);
         //更新本地缓存
         LOCAL_CACHE.put(cacheKey, cacheValue);
         // 获取封装类
