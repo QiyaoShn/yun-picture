@@ -56,5 +56,7 @@ knife4j:
           - com.yupi.yunpicturebackend.controller
 
 
+# 对象存储配置（腾讯云中获取）<已经写入了local.yml文件中>
 
+# 阿里云AI配置（配置API-KEY调用模型）
 
