@@ -54,7 +54,7 @@ spring:
             type: CLASS_BASED
             props:
               strategy: standard
-              algorithmClassName: com.yupi.yunpicturebackend.manager.sharding.PictureShardingAlgorithm
+              algorithmClassName: com.yupi.yupicture.shared.sharding.PictureShardingAlgorithm
     props:
       sql-show: true
 
@@ -83,7 +83,7 @@ knife4j:
         group-name: 默认分组
         api-rule: package
         api-rule-resources:
-          - com.yupi.yunpicturebackend.controller
+          - com.yupi.yupicture.interfaces.controller
 
 
 # 对象存储配置（腾讯云中获取）<已经写入了local.yml文件中>

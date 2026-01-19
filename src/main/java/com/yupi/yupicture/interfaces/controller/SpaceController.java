@@ -1,7 +1,7 @@
 package com.yupi.yupicture.interfaces.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yupi.yunpicturebackend.manager.auth.SpaceUserAuthManager;
+import com.yupi.yupicture.shared.auth.SpaceUserAuthManager;
 import com.yupi.yupicture.application.service.SpaceApplicationService;
 import com.yupi.yupicture.application.service.UserApplicationService;
 import com.yupi.yupicture.domain.space.entity.Space;

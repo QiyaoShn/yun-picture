@@ -1,8 +1,8 @@
 package com.yupi.yupicture.interfaces.controller;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.yupi.yunpicturebackend.manager.auth.annotation.SaSpaceCheckPermission;
-import com.yupi.yunpicturebackend.manager.auth.model.SpaceUserPermissionConstant;
+import com.yupi.yupicture.shared.auth.annotation.SaSpaceCheckPermission;
+import com.yupi.yupicture.shared.auth.model.SpaceUserPermissionConstant;
 import com.yupi.yupicture.application.service.SpaceUserApplicationService;
 import com.yupi.yupicture.application.service.UserApplicationService;
 import com.yupi.yupicture.domain.space.entity.SpaceUser;

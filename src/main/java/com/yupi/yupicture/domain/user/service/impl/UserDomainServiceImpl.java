@@ -5,7 +5,7 @@ import cn.hutool.core.util.ObjUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yupi.yunpicturebackend.manager.auth.StpKit;
+import com.yupi.yupicture.shared.auth.StpKit;
 import com.yupi.yupicture.domain.user.entity.User;
 import com.yupi.yupicture.domain.user.repository.UserRepository;
 import com.yupi.yupicture.domain.user.service.UserDomainService;
